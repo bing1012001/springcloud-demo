@@ -1,0 +1,4 @@
+com/cloud/provider/payment/dao/PaymentDao.class
+com/cloud/provider/payment/controller/PaymentController.class
+com/cloud/provider/payment/service/PaymentService.class
+com/cloud/provider/payment/CloudProviderPaymentApplication.class

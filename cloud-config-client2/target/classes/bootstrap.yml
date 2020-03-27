@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: cloud-config-client
+  cloud:
+    config:
+      label: master
+      name: config
+      profile: dev
+      uri: http://localhost:3344
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://Eureka01:7001/eureka/, http://Eureka02:7002/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

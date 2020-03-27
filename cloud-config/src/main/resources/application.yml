@@ -1,0 +1,36 @@
+server:
+  port: 3344
+
+spring:
+  application:
+    name: cloud-config-center
+  cloud:
+    config:
+      server:
+        git:
+          search-paths:
+            - spring-cloud-config
+          label: master
+          uri: https://github.com/bing1012001/spring-cloud-config.git
+
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://Eureka01:7001/eureka/, http://Eureka02:7002/eureka/
+  instance:
+    instance-id: cloud-config-center
+
+#used to refresh the post request and notify bus
+management:
+  endpoints:
+    web:
+      exposure:
+        include: 'bus-refresh'
